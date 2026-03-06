@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+     body{
+	margin: 0;
+	font-family: Calibri;
+    Background: rgb(49, 87, 100);
+	Display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+       }
+    .login-container{
+	
+	padding: 50px;
+	border-radius: 50px;
+	Box-shadow: 0px 0px 120px rgba(150,2000,500,0.8);
+    width: 250px; /* Auto fit */
+	max-width: 400px; /* max size for desktop */
+    text-align: center;
+	bottom: 400px;
+	right: 100px;
+	
+    }
+  .login-container h2 {
+    margin-bottom: 20px;
+        }
+
+        .input-box {
+            width: 100%; /* full width */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #4facfe;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #00c6ff;
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 15px;
+        }
+
+        .footer-text a {
+            text-decoration: none;
+            color: #4facfe;
+        }
+    </style>
+
+      <script>
+	function loginUser(){
+
+	var username = document.getElementById("mohan").value.trim();
+	var password = document.getElementById("1234").value.trim();
+	var errormsg = document.getElementById("error");
+    }
+	if ( username === "" && password === "")
+	{errormsg.innerHTML=  "username and password cannot be empty";
+	return false;
+	}
+	
+	
+	if (username === "mohan" && password ==="1234")
+	{errormsg.innerHTML= "Login Successful";
+      }
+	else {
+      	    errormsg.innerHTML= "invalid Username or Password";
+       }
+     </script>
+
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form action="file:///D:/New%20Project/file.html?#">
+            <input type="text" placeholder="username" class="input-box" required>
+            <input type="password" placeholder="password" class="input-box" required>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="footer-text">
+            Don't have an account? <a href="#">Register</a>
+        </div>
+    </div>
+</body>
+</html>
